@@ -3,5 +3,5 @@ from .views import FuncionariosList
 
 
 urlpatterns = [
-    path('', FuncionariosList.as_view(), name='funcionarios_list')
+    path('funcionarios', FuncionariosList.as_view(), name='list_funcionarios')
 ]
