@@ -6,6 +6,6 @@
     {% for departamento in object_list %}
         <a href="" type="" class="" about="">{{ departamento }}</a><br>
         <a href="">Deletar</a>
-        <a href="", class="btn btn-btn-info">Novo</a>
+        <a href="{% url 'create_departamento' %}", class="btn btn-btn-info">Novo</a>
     {% endfor %}
 {% endblock %}
