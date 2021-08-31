@@ -1,7 +1,7 @@
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.urls.base import reverse_lazy
 from .models import Departamento
 
-from django.shortcuts import render
 
 # Create your views here.
 class DepartamentosList(ListView):
@@ -21,3 +21,13 @@ class DepartamentoCreate(CreateView):
         departamento.empresa = self.request.user.funcionario.empresa
         departamento.save()
         return super(DepartamentoCreate, self).form_valid(form)
+
+
+class DepartamentoUpdate(UpdateView):
+    model = Departamento
+    fields = ['nome']
+
+
+class DepartamentoDelete(DeleteView):
+    model = Departamento
+    success_url = reverse_lazy('list_departamentos')
