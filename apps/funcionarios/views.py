@@ -12,13 +12,16 @@ class FuncionariosList(ListView):
         empresa_logada = self.request.user.funcionario.empresa
         return Funcionario.objects.filter(empresa=empresa_logada)
 
+
 class FuncionariosEdit(UpdateView):
     model = Funcionario
     fields = ['nome', 'departamentos']
 
+
 class FuncionariosDelete(DeleteView):
     model = Funcionario
     success_url = reverse_lazy('list_funcionarios')
+
 
 class FuncionariosNovo(CreateView):
     model = Funcionario
