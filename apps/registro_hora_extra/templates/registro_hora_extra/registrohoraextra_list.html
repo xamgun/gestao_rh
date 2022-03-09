@@ -3,7 +3,11 @@
 
 {% block main %}
     List
+    <br>
     {% for registro_re in object_list %}
+    <a href="{% url 'update_hora_extra' registro_re.id %}">
         {{registro_re}}
+    </a>
+        <br>
     {% endfor %}
 {% endblock %}
