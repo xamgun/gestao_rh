@@ -8,6 +8,9 @@
     <a href="{% url 'update_hora_extra' registro_re.id %}">
         {{registro_re}}
     </a>
+    <a href="{% url 'delete_hora_extra' registro_re.id %}">
+        Deletar
+    </a>
         <br>
     {% endfor %}
 {% endblock %}
