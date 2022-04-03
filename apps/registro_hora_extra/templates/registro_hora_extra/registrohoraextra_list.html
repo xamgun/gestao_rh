@@ -11,6 +11,9 @@
     <a href="{% url 'delete_hora_extra' registro_re.id %}">
         Deletar
     </a>
-        <br>
+    <br>
     {% endfor %}
+    <a href="{% url 'create_hora_extra' %}" class="btn btn-info"> 
+        Novo 
+    </a>
 {% endblock %}
